@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_fullMoon"
+        android:icon="@drawable/ic_brightness_1_black_24dp"
+        android:title="Full MOON" />
+
+    <item
+        android:id="@+id/ic_halfMoon"
+        android:icon="@drawable/ic_brightness_1_black_24dp"
+        android:title="Half MOON" />
+
+    <item
+        android:id="@+id/ic_littleMoon"
+        android:icon="@drawable/ic_brightness_1_black_24dp"
+        android:title="Little MOON" />
+
+</menu>

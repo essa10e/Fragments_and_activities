@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTOPbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_gray_border_bottom">
+
+                </android.support.design.widget.TabLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayoutTOPbar"
+            android:layout_above="@+id/relativeLayoutBottomBar">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_gray_border_top">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="100"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:src="@drawable/ic_brightness_1_black_24dp"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:src="@drawable/ic_brightness_2_black_24dp"/>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:src="@drawable/ic_brightness_3_black_24dp"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.AppBarLayout>
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

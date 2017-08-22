@@ -1,0 +1,43 @@
+package com.essa10e.a31stapp;
+
+import android.support.design.internal.BottomNavigationItemView;
+import android.support.design.internal.BottomNavigationMenuView;
+import android.support.design.widget.BottomNavigationView;
+import android.util.Log;
+
+import java.lang.reflect.Field;
+
+/**
+ * Created by essa10e on 8/7/17.
+ *
+ * This class is to override the bottom navigation menu:
+ * --> remove icon animation for bottom nav view:
+ *
+ * this code is taken from StackOverFlow:
+ * https://stackoverflow.com/questions/41649494/how-to-remove-icon-animation-for-bottom-navigation-view-in-android
+ */
+
+public class bottomNavViewHelper {
+
+    public static void disableShiftMode(BottomNavigationView view) {
+        BottomNavigationMenuView menuView = (BottomNavigationMenuView)view.getChildAt(0);
+        try {
+            Field shiftingMode = menuView.getClass().getDeclaredField("mShiftingMode");
+            shiftingMode.setAccessible(true);
+            shiftingMode.setBoolean(menuView, false);
+            shiftingMode.setAccessible(false);
+            for (int i = 0; i < menuView.getChildCount(); i++) {
+                BottomNavigationItemView item = (BottomNavigationItemView) menuView.getChildAt(i);
+                //noinspection RestrictedApi
+                item.setShiftingMode(false);
+                // set once again checked value, so view will be updated
+                //noinspection RestrictedApi
+                item.setChecked(item.getItemData().isChecked());
+            }
+        } catch (NoSuchFieldException e) {
+            Log.e("BNVHelper", "Unable to get shift mode field", e);
+        } catch (IllegalAccessException e) {
+            Log.e("BNVHelper", "Unable to change value of shift mode", e);
+        }
+    }
+}

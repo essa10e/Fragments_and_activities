@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello: this is Fragment 2"
+        android:textSize="25dp"
+        android:layout_above="@+id/btnNavFrag1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
+
+    <Button
+        android:id="@+id/btnNavFrag1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aa99ff"
+        android:text="Go to Fragment 1"
+        android:layout_above="@+id/btnNavFrag2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
+
+    <Button
+        android:id="@+id/btnNavFrag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#99aaff"
+        android:text="Go to Fragment 2"
+        android:layout_above="@+id/btnNavFrag3"
+        android:layout_alignStart="@+id/btnNavFrag1"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnNavFrag3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00aaff"
+        android:text="Go to Fragment 3"
+        android:layout_above="@+id/btnNav2ndActivity"
+        android:layout_alignStart="@+id/btnNavFrag2"
+        android:layout_marginBottom="22dp" />
+
+    <Button
+        android:id="@+id/btnNav2ndActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#cee9bf"
+        android:text="Go to 2nd Activity"
+        android:layout_marginBottom="141dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnNavFrag3" />
+
+
+
+
+
+</RelativeLayout>
